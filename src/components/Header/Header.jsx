@@ -1,5 +1,7 @@
 import React from "react";
 import "./Header.scss";
+import { FaUserCircle } from "react-icons/fa";
+import { BsCart3 } from "react-icons/bs";
 
 const Header = () => {
     return (
@@ -11,14 +13,16 @@ const Header = () => {
                 <a href="#">Shop Collection</a>
                 <a href="#">Our Story</a>
                 <a href="#">Contact</a>
-                {/* <div>
-                    <div>
+                <div className="user_container">
+                    <div className="user_box">
+                        <FaUserCircle />
                         <span>Log in</span>
                     </div>
-                    <div>
-                        <span>15</span>
+                    <div className="user_box">
+                        <BsCart3 />
+                        <span className="right">15</span>
                     </div>
-                </div> */}
+                </div>
             </nav>
         </div>
     );

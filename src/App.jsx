@@ -1,11 +1,14 @@
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+// import Story from "./components/Page/Story/Story";
+// import Contact from "./components/Page/Contact/Contact";
 
 function App() {
     return (
         <div className="App">
             <Header />
-            <h1>Set up</h1>
+            {/* <Contact />
+            <Story /> */}
             <Footer />
         </div>
     );
