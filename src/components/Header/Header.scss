@@ -44,6 +44,11 @@
         @include md {
             min-width: 45%;
         }
+        &.sticky-header {
+            position: sticky;
+            top: 0;
+            animation: stickyHeader 0.3s ease forwards;
+        }
         a {
             text-decoration: none;
             color: black;
@@ -64,5 +69,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes stickyHeader {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
