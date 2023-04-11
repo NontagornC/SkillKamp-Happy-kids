@@ -1,28 +1,30 @@
 import React from "react";
 import "./Header.scss";
-import { FaUserCircle } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <div className="header_container">
             <span>Free Shipping Over $50</span>
             <h1>happy kids</h1>
             <nav className="menu_bar">
-                <a href="#">Home</a>
-                <a href="#">Shop Collection</a>
-                <a href="#">Our Story</a>
-                <a href="#">Contact</a>
-                <div className="user_container">
-                    <div className="user_box">
-                        <FaUserCircle />
-                        <span>Log in</span>
-                    </div>
-                    <div className="user_box">
-                        <BsCart3 />
-                        <span className="right">15</span>
-                    </div>
-                </div>
+                <a href="#" onClick={() => navigate(`/`)}>
+                    Home
+                </a>
+                <a href="#" onClick={() => navigate(`/shopcollection`)}>
+                    Shop Collection
+                </a>
+                <a href="#" onClick={() => navigate(`/story`)}>
+                    Our Story
+                </a>
+                <a href="#" onClick={() => navigate(`/contact`)}>
+                    Contact
+                </a>
+                <a href="#">
+                    <BsCart3 />
+                </a>
             </nav>
         </div>
     );

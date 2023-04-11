@@ -54,38 +54,13 @@
             @include md {
                 font-size: 1.5rem;
             }
-        }
-        .user_container {
-            display: flex;
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            .user_box {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                svg {
-                    font-size: 3rem;
+            svg {
+                font-size: 1rem;
+                @include sm {
+                    font-size: 1.3rem;
                 }
-                span {
-                    background: none;
-                    color: black;
-                    font-size: 1rem;
-                    padding: 0 1rem;
-                    @include sm {
-                        font-size: 1.3rem;
-                    }
-                    @include md {
-                        font-size: 1.5rem;
-                    }
-                }
-                .right {
-                    background-color: black;
-                    color: white;
-                    border-radius: 50%;
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    padding-left: 1rem;
+                @include md {
+                    font-size: 1.5rem;
                 }
             }
         }

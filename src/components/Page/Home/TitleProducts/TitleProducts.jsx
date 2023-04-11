@@ -1,26 +1,6 @@
-import React, { useEffect, useState } from "react";
-import fetchData from "../../../../utils/fetchData";
-import { Product1 } from "../../../../assets/Happy kids-Materials";
 import "./TitleProducts.scss";
 
-const TitleProducts = () => {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        getData("https://skillkamp-api.com/v1/api/products/");
-    }, []);
-
-    const getData = (url) => {
-        fetchData(url)
-            .then((result) => {
-                setData(result.data.detail.data.catalog.category.productsWithMetaData.list);
-                console.log("test", data);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    };
-
+const TitleProducts = ({ data }) => {
     return (
         <div className="title_container">
             <h1>New Arrivals</h1>

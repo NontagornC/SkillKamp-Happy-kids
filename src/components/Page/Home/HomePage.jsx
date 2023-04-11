@@ -2,11 +2,11 @@ import React from "react";
 import CarouselPage from "./Carousel/Carousel";
 import TitleProducts from "./TitleProducts/TitleProducts";
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
     return (
         <div>
             <CarouselPage />
-            <TitleProducts />
+            <TitleProducts data={data} />
         </div>
     );
 };
